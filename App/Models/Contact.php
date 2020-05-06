@@ -68,7 +68,17 @@ class Contact extends Model{
         $stmt->execute();
 
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-	}
+    }
+    
+    public function Contact(){
+
+        $query = "select id, name, number, email from contact where name = :name";
+        $stmt= $this->db->prepare($query);
+        $stmt->bindValue(':name', $this->__get('name'));
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
 
 ?>

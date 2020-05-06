@@ -1,1 +1,16 @@
-Search Contacts...
+<h1>Search Contact..</h1>
+<?php if(isset($_POST['name'])) { ?>
+    <?php foreach ($this->view->Search as $key => $contact) { ?>
+        <div id="Contact">
+            <div id="Name">
+                <label><strong>Name:</strong></label> <?= $contact['name'] ?>
+            </div>
+            <div id="Number">
+                <label><strong>Number:</strong></label> <?= $contact['number'] ?>
+            </div>
+            <div id="Email">
+                <label><strong>Email:</strong></label> <?= $contact['email'] ?>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>
