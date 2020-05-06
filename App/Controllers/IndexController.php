@@ -52,6 +52,14 @@ class IndexController extends Action {
 		}
 
 	}
+
+
+	public function searchContact(){
+
+		$contact = Container::getModel('Contact');
+		$this->view->Contacts = $contact->getContact();
+		$this->render('listContacts');
+	}
 }
 
 

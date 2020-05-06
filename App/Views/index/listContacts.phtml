@@ -1,11 +1,13 @@
-<div id="Contact">
-    <div id="Name">
-        <label><strong>Name:</strong></label> Darkson
+<?php foreach ($this->view->Contacts as $key => $contact) { ?>
+    <div id="Contact">
+        <div id="Name">
+            <label><strong>Name:</strong></label> <?= $contact['name'] ?>
+        </div>
+        <div id="Number">
+            <label><strong>Number:</strong></label> <?= $contact['number'] ?>
+        </div>
+        <div id="Email">
+            <label><strong>Email:</strong></label> <?= $contact['email'] ?>
+        </div>
     </div>
-    <div id="Number">
-        <label><strong>Number:</strong></label> 988400709
-    </div>
-    <div id="Email">
-        <label><strong>Email:</strong></label> darksonbezerra@hotmail.com
-    </div>
-</div>
+<?php } ?>

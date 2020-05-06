@@ -31,6 +31,12 @@ class Route extends Bootstrap {
 			'controller' => 'indexController',
 			'action' => 'register'
 		);
+
+		$routes['searchContact'] = array(
+			'route' => '/searchContact',
+			'controller' => 'indexController',
+			'action' => 'searchContact'
+		);
 		$this->setRoutes($routes);
 	}
 
